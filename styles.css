@@ -110,8 +110,6 @@ aside {
   font-weight: 400;
 }
 
-/*---------------------------------------------------------*/
-
 .content {
   flex-grow: 1;
   padding: 50px 50px 40px;
@@ -301,12 +299,28 @@ aside {
 }
 
 /* table body */
+
+.student-table__tbody--check {
+  cursor: pointer;
+}
 .student-table__tbody--checked {
   border-left: 5px solid #4d44b5;
 }
 
 .student-table__tbody--notchecked {
-  border-left: 5px solid #fff;
+  position: relative;
+  border-radius: 10px;
+}
+
+.student-table__tbody--notchecked::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  bottom: 0;
+  width: 5px;
+  background-color: #fff;
+  border-top-left-radius: 10px;
 }
 
 .checkboxContainer {
