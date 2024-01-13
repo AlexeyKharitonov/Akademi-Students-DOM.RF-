@@ -1,0 +1,482 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  background-color: #f3f4ff;
+}
+
+.container {
+  display: flex;
+  max-width: 1620px;
+}
+
+aside {
+  width: 345px;
+  height: 1188px;
+  flex-shrink: 0;
+  background: var(--Color-Purple, #4d44b5);
+}
+
+.branding {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  font-size: 36px;
+  font-weight: 700;
+  padding: 50px 66px 46px 46px;
+  color: #fff;
+}
+
+.branding__logo {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  padding: 3px 11px 3px 11px;
+  background: #fb7d5b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar {
+  padding: 0 0 80px 46px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.sidebar__item {
+  display: flex;
+  width: 299px;
+  padding: 16px 24px;
+  align-items: center;
+  gap: 24px;
+}
+
+.sidebar__active {
+  display: flex;
+  width: 299px;
+  padding: 16px 24px;
+  align-items: center;
+  gap: 24px;
+  border-radius: 40px 0px 0px 40px;
+  color: #4d44b5;
+  background: var(--Color-Background, #f3f4ff);
+}
+
+.sidebar__item--link {
+  text-decoration: none;
+  color: var(--Color-Gray-2, #c1bbeb);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.sidebar__item--active--link {
+  text-decoration: none;
+  color: var(--Color-Purple, #4d44b5);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.sidebar__footer {
+  padding: 0 19px 0 34px;
+  margin-bottom: 172px;
+  font-size: 14px;
+  color: var(--Color-White, #fff);
+}
+
+.sidebar__branding {
+  font-weight: 700;
+  padding-bottom: 15px;
+}
+
+.sidebar__credits {
+  font-weight: 400;
+}
+
+.content {
+  flex-grow: 1;
+
+  padding: 50px 50px 40px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 46px;
+}
+
+.header > h1 {
+  color: var(--Color-Text, #303972);
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+}
+
+.icon-button {
+  border: none;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  border-radius: 40px;
+  background: var(--Color-White, #fff);
+  box-shadow: 0px 20px 50px 0px rgba(191, 21, 108, 0.05);
+  position: relative;
+}
+
+.icon-button img {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#notifications-ellipse {
+  position: absolute;
+  top: 14px;
+  left: 45px;
+  width: 8px;
+  height: 8px;
+}
+
+.notifications {
+  display: flex;
+  gap: 20px;
+}
+
+.user-profile {
+  margin: 0 24px 0 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.user-name {
+  color: var(--Color-Text, #303972);
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.user-role {
+  color: var(--Color-Gray-3, #a098ae);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.placeholder-button {
+  border: none;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  border-radius: 40px;
+  background: var(--Color-Gray-2, #c1bbeb);
+}
+
+.search-panel {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.search-panel__form {
+  position: relative;
+  width: 432px;
+}
+
+.search-panel__input {
+  width: 350px;
+  height: 60px;
+  border-radius: 40px;
+  color: #a098ae;
+  font-size: 18px;
+  font-weight: 400;
+  padding-left: 80px;
+  outline: none;
+  border: none;
+}
+
+.search-panel__input::placeholder {
+  color: #a098ae;
+}
+
+.search-panel__image {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 50%;
+  left: 32px;
+  transform: translateY(-50%);
+}
+
+.search-panel__actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-panel__button {
+  width: 207px;
+  height: 60px;
+  padding: 16px 3px;
+  border-radius: 40px;
+  border: 2px solid var(--Color-Purple, #4d44b5);
+  box-shadow: 0px 20px 50px 0px rgba(191, 21, 108, 0.05);
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.search-panel__button--sort {
+  color: #4d44b5;
+  background-color: #f3f4ff;
+}
+
+.search-panel__button--add {
+  color: #fff;
+  background-color: #4d44b5;
+}
+
+.search-panel__button--content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.search-panel__button--sort--image {
+  width: 32px;
+  height: 32px;
+}
+
+.search-panel__button--add--image {
+  width: 16.235px;
+  height: 16.165px;
+}
+
+/* table */
+.student-table {
+  width: 1475px;
+  height: 873px;
+  background-color: #fff;
+  border-radius: 20px;
+  border-collapse: collapse;
+  padding-bottom: 40px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.student-table__thead th {
+  border-bottom: 1px solid #cccccc;
+  color: #303972;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 32px 32px 25px;
+}
+
+.student-table__tbody--checked {
+  border-left: 5px solid #4d44b5;
+}
+
+.student-table__tbody--notchecked {
+  border-left: 5px solid #fff;
+}
+
+.checkboxContainer {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.checkboxInput {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.customCheckbox {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #c1bbeb;
+  border-radius: 4px;
+  box-sizing: border-box;
+  cursor: pointer;
+  background: transparent;
+  transition: background-color 0.2s;
+}
+
+.student-table__tbody--name {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 16px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #303972;
+}
+
+#student-table__tbody--id {
+  font-size: 18px;
+  font-weight: 600;
+  color: #4d44b5;
+}
+
+#student-table__tbody--time {
+  color: #a098ae;
+}
+
+.student-table__tbody--name--circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 40px;
+  background: #c1bbeb;
+}
+
+.student-table__tbody td {
+  color: #303972;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 32px 30px;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.student-table__tbody_icons {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.student-table__tbody--button {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.student-table__tbody--call img {
+  width: 24px;
+  height: 24px;
+  color: #4d44b5;
+}
+
+.student-table__tbody--button--grade {
+  display: flex;
+  width: 80px;
+  height: 40px;
+  padding: 4px 8px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+.student-table__tbody--button--VIIA {
+  background-color: #fb7d5b;
+}
+
+.student-table__tbody--button--VIIB {
+  background-color: #fcc43e;
+}
+
+.student-table__tbody--button--VIIC {
+  background-color: #4d44b5;
+}
+
+.student-table__tbody--button--dots {
+  background: none;
+  border: none;
+  padding: 0 0 0 20px;
+  margin: 0;
+  cursor: pointer;
+}
+
+/* table footer */
+.student-table__tfoot td {
+  text-align: left;
+  padding: 32.5px 0 32.5px 32px;
+  background-color: #fff;
+  border-radius: 0 0 20px 20px;
+  color: #a098ae;
+  font-size: 14px;
+  font-weight: 400;
+  border-bottom: none;
+}
+
+.student-table__tfoot--number {
+  color: #303972;
+}
+
+.student-table__tfoot--content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 32px;
+}
+
+.student-table__tfoot--paginate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.student-table__tfoot--page {
+  width: 51px;
+  height: 51px;
+  border-radius: 40px;
+  border: 2px solid #a098ae;
+  cursor: pointer;
+  color: #a098ae;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.student-table__tfoot--page--active {
+  width: 50px;
+  height: 50px;
+  border-radius: 40px;
+  cursor: pointer;
+  background: #4d44b5;
+  border: none;
+  font-size: 18px;
+  font-weight: 400;
+  box-shadow: 0px 7px 16px 0px rgba(0, 0, 0, 0.14);
+  color: #fff;
+}
+
+.student-table__tfoot--paginate img {
+  width: 32px;
+  height: 32px;
+}
+
+.student-table__tfoot--button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
